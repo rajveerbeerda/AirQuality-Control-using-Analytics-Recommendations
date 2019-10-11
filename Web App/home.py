@@ -23,7 +23,6 @@ def index():
         return redirect(url_for('cityDetails'))
     return render_template('index.html')
 
-
 @app.route('/city-details',methods=['GET','POST'])
 def cityDetails():
     population_density = {'Janakpuri':14000, 'Mayapuri':14000, 'N.Y.':5500, 'Nizamuddin':70000, 'Pritampura':14000,
@@ -66,7 +65,10 @@ def aqiTest():
     min_aqi = session.get('min_aqi')
 
     if request.method=='POST':
-        return redirect(url_for('shareDetails'))
+        if request.form['share']=='Back to Home':
+            return redirect(url_for('index'))
+        else:
+            return redirect(url_for('shareDetails'))
 
     return render_template('aqi-test.html', predicts = dc, min_aqi = min_aqi, max_aqi = max_aqi)
 
