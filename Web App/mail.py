@@ -3,7 +3,7 @@ from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-pwd='BhebhaRAM@16'
+pwd='brown_boys1998'
 
 
 
@@ -25,7 +25,7 @@ def send_mail(contacts, message, max_aqi, subject='URGENT: Steep incline in Air 
     s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587)
     s.ehlo()
     s.starttls()
-    s.login('rb5096@bennett.edu.in', pwd)
+    s.login('brown_boys04@outlook.com', pwd)
 
     if str(type(contacts)).split()[-1][1:-2]=='str':
         names, emails = get_contacts(contacts)
@@ -38,7 +38,7 @@ def send_mail(contacts, message, max_aqi, subject='URGENT: Steep incline in Air 
 
 
             # setup the parameters of the message
-            msg['From'] = 'rb5096@bennett.edu.in'
+            msg['From'] = 'brown_boys04@outlook.com'
             msg['To'] = email
             msg['Subject'] = subject
 
@@ -58,7 +58,7 @@ def send_mail(contacts, message, max_aqi, subject='URGENT: Steep incline in Air 
 
             message = message_template.substitute(XXX=max_aqi)
 
-            msg['From'] = 'rb5096@bennett.edu.in'
+            msg['From'] = 'brown_boys04@outlook.com'
             msg['To'] = email
             msg['Subject'] = subject
 
