@@ -1,0 +1,15 @@
+Dear ${PERSON_NAME}, 
+
+This is to bring to your attention that a steep incline in Air Quality Index is predicted for next week, predicted AQI is ${XXX}. 
+
+The below mentioned policy decisions are strongly advised, and should be taken now to prevent worsened air pollution in the near future.
+
+All contruction activities in the concerned area are recommended to be halted for the near future.
+
+Any industrial activities leading to air pollution should be halted for the time, otherwise should work for restricted hours only.
+
+Marketing & Awareness campaigns should be run to warn public about the predicted drop in air quality and advise them to take all actions to prevent themselves from affects it have on their health.
+
+Schools should declare holidays for the pre-primary sections effective immediately, and for all students as the air pollution rises in the upcoming days.
+
+Thank You

@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<img src="{{ url_for('static',filename=file_name)}}">
+
+<h1>{{ city_name }} </h1>
+<p><b>Type of Location :</b> {{ type_loc }}</p>
+<p><b>Population Density :</b> {{ pp_density }} persons per km-square</p>
+
+<form method="POST" action="">
+    <div class="form-actions">
+        <form method="POST" action="http://localhost:1234/city-details/aqi-test">
+            <p><input type="submit" class="btn btn-primary btn-xl" value="Future Predictions"></p>
+        </form>
+    </div>
+</form>
+<br>
+<br>
+{% endblock %}

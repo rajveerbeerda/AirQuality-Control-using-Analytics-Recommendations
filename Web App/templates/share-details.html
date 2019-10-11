@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<form method="POST" action="">
+
+    <div class="form-group">
+        <label for="username">Your name</label>
+        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="e.g. Riya Kohli">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Enter your Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+        <label for="email1">Share with someone</label>
+        <input type="text" class="form-control" id="email1" name="email1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small class="form-text text-muted">You can share it with anyone who you might think can influence others. (Secretary of Society, Head of RWA, etc.)</small>
+        <small class="form-text text-muted">* Multiple Email Addresses should be entered in a comma-separated format.</small>
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="subject" name="subject" aria-describedby="emailHelp" placeholder="Your message">
+        <small class="form-text text-muted">Enter your Personalized Message for the Recipients</small>
+
+    </div>
+
+
+    <div class="form-actions">
+        <form method="POST" action="http://localhost:1234/city-details/aqi-test/share-details">
+            <p><input type="submit" name="share" class="btn btn-primary btn-xl" value="Submit"></p>
+        </form>
+    </div>
+</form>
+
+
+{% endblock %}

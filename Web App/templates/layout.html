@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AQI Prediction and Prevention</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            .form-actions {
+                margin: 0;
+                background-color: transparent;
+                text-align: center;
+            }
+            .btn-xl {
+                padding: 10px 20px;
+                font-size: 21px;
+                border-radius: 30px;
+                width:500px;
+            }
+            .btn-sl {
+                padding: 10px 20px;
+                font-size: 15px;
+                border-radius: 30px;
+                width:300px;
+            }
+        </style>
+    </head>
+    <body>
+        {% include 'includes/_navbar.html' %}
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="container">
+            {% block body %} {% endblock %}
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

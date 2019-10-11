@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h1>Air Pollution Prevention System</h1>
+    <p class="lead">Air Pollution Prevention System - Detail</p>
+  </div>
+
+
+<h1>Select Locality</h1>
+<form method="POST" action="">
+    <div class="form-group">
+      <select class="form-control" id="var1" name="par">
+          <option value="" selected>Select</option>
+          <option value="Nizamuddin_residential">Nizamuddin, Delhi</option>
+          <option value="Shahadra_industrial">Shahadra, Delhi</option>
+          <option value="Mayapuri_industrial">Mayapuri Industrial Area, Delhi</option>
+          <option value="N.Y. SCHOOL_residential">N.Y. SCHOOL, Sarojini Nagar, Delhi</option>
+          <option value="Siri Fort_residential">Siri Fort, Delhi</option>
+          <option value="Pritampura_residential">Pritampura, Delhi</option>
+          <option value="Shahzada Bagh_industrial">Shahzada Bagh, Delhi</option>
+          <option value="Janakpuri_residential">Janakpuri, Delhi</option>
+      </select>
+
+
+    </div>
+    <div class="form-actions">
+        <form method="POST" action="http://localhost:1234/city-details">
+            <p><input type="submit" class="btn btn-primary btn-xl" value="Go"></p>
+        </form>
+    </div>
+</form>
+
+{% endblock %}

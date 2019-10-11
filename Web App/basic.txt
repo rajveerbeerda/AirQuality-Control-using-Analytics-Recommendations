@@ -1,0 +1,5 @@
+Dear ${PERSON_NAME}, 
+
+This is to bring to your attention that a steep incline in Air Quality Index is predicted for next week, predicted AQI is ${XXX}. 
+
+The following is the recommended course of action that should be taken from your side,

@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<div class=" text-center">
+    <h1><b>Predictions for Upcoming Week</b></h1>
+</div>
+
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">Day</th>
+      <th scope="col">NO2</th>
+      <th scope="col">SO2</th>
+      <th scope="col">Air Quality Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for o in predicts %}
+    <tr>
+        <td>Day {{ o }}</td>
+        <td>{{ predicts[o][0] }}</td>
+        <td>{{ predicts[o][1] }}</td>
+        <td>{{ predicts[o][2] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Weekly Analysis</h2>
+<p>
+    <b>Maximum AQI : </b>{{ max_aqi }}<br>
+    <b>Minimum AQI : </b>{{ min_aqi }}<br>
+</p>
+
+<h4>
+    <b>Analysis : </b>
+{% if 0<=max_aqi<=50 %}
+    Great day, try to spend some time outdoors.
+{% elif 50<max_aqi<=100 %}
+    People with breathing issues/ respiratory diseases be cautious and spend minimum possible time outdoors.
+{% elif 100<max_aqi<=200 %}
+    Any patients should avoid going outdoors.
+{% elif 200<max_aqi<=300 %}
+    Could affect even healthy people at prolonged exposures, the use of masks while outdoors is recommended.
+{% elif 300<max_aqi<=400 %}
+    Start taking precautionary measures actively : Click the button below to get the list of all precautions in your mailbox.
+{% else %}
+    Emergency, DO NOT go outdoors : Click the button below to get the list of all precautions in your mailbox and start implementing them immediately.
+{% endif %}
+</h4>
+<br>
+<h5>Reducing Air Pollution requires all of our attention and actions if you know anyone who can help spread the word, and reach more ears please enter their email id in the next step and help the Earth.</h5>
+<br>
+<form method="POST" action="">
+    <div class="form-actions">
+        <form method="POST" action="http://localhost:1234/city-details/aqi-test/share-details">
+            <p><input type="submit" name="share" class="btn btn-primary btn-xl" value="Click here to get Community Guidelines"></p>
+        </form>
+    </div>
+</form>
+
+<div class="container my-4">
+    <div class="d-flex justify-content-center border border-light p-5">
+        <img src="{{ url_for('static',filename='Hackathon.jpg')}}" class="img-fluid" alt="">
+    </div>
+</div>
+
+
+{% endblock %}
