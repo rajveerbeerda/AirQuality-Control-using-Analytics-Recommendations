@@ -34,6 +34,7 @@
     <b>Minimum AQI : </b>{{ min_aqi }}<br>
 </p>
 
+
 <h4>
     <b>Analysis : </b>
 {% if 0<=max_aqi<=50 %}
@@ -55,9 +56,15 @@
 <br>
 <form method="POST" action="">
     <div class="form-actions">
-        <form method="POST" action="http://localhost:1234/city-details/aqi-test/share-details">
-            <p><input type="submit" name="share" class="btn btn-primary btn-xl" value="Click here to get Community Guidelines"></p>
-        </form>
+        {% if max_aqi>300 %}
+            <form method="POST" action="http://localhost:1234/city-details/aqi-test/share-details">
+                <p><input type="submit" name="share" class="btn btn-primary btn-xl" value="Click here to get Community Guidelines"></p>
+            </form>
+        {% else %}
+            <form method="POST" action="http://localhost:1234/">
+                <p><input type="submit" name="share" class="btn btn-primary btn-xl" value="Back to Home"></p>
+            </form>
+        {% endif %}
     </div>
 </form>
 
