@@ -42,7 +42,7 @@ def rspm_facc(file):
     d = {}
 
     for i in range(1, 8):
-        lst = [predicts[0][i-1], predicts[1][i-1], predicts[2][i-1]]
+        lst = [predicts[0][i-1][0], predicts[1][i-1][0], predicts[2][i-1][0]]
         d[i] = lst
 
 
@@ -50,4 +50,4 @@ def rspm_facc(file):
 
 def run(file):
     warnings.filterwarnings('ignore')
-    rspm_facc(file)
+    return rspm_facc(file)
