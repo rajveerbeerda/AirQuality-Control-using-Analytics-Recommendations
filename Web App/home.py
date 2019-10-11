@@ -11,10 +11,6 @@ from mail import send_mail
 from algo import run
 
 app = Flask(__name__)
-@app.after_request
-def add_header(response):
-    response.headers['Cache-Control'] = 'public, max-age=0'
-    return response
 
 class createForm(Form):
     par1 = StringField('Parameter 1', [validators.Length(min=1, max=1)])
@@ -93,14 +89,6 @@ def shareDetails():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-@app.after_request
-def add_header(response):
-    # response.cache_control.no_store = True
-    response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
-    response.headers['Pragma'] = 'no-cache'
-    response.headers['Expires'] = '-1'
-    return response
 
 if __name__ == "__main__":
     app.secret_key = 'secret12'
