@@ -1,0 +1,10 @@
+Home Page: Welcome to Innovaccer, How can I help?
+Button 1: I've Arrived
+button 2: I'm leaving
+
+Checkin Page:
+After taking the input, a popup: We've notified your host of your arrival, Have a nice day...
+
+Checkout page:
+After checking out, a popup: You've been succesfully checked out, see you soon...
+
