@@ -4,7 +4,7 @@ ACAR: Air-Pollution Control using Analytics And Recommendations
 To help prevent the Air-Pollution from happening in the first place this solution was created, it uses a Time-Series analysis to predict the Air-pollution but the USP of this project is when a sudden spike in the Air-Pollution is expected, it sends to out the alert to Govt. officials as well as local authorities and generalm public along with some preventive measures that every one of them can take to play their part to prevent the air pollution.
 
 
-
+It acts as a platform to bring together the community, the goverment and the Artificial Intelligence all in one place as Air Pollution can't be defeated by software alone.
 
 
 First the repository has to be cloned or downloaded, and all the files be extracted,
